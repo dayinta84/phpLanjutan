@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            margin-top: 20px;
+        }
+
+        #tempat  {
+            width: 30%;
+        }
+        textarea {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="text"],
+        input[type="email"]{
+            width: 55%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 0 auto 10px;
+            display: block;
+            
+        }
+        input[type="date"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulir Pendaftaran</h2>
+        <form action="prosesPendaftaran.php" method="post">
+            NIM : <input type="text" id="nim" name="nim"><br>
+            Nama Lengkap : <input type="text" id="nama" name="nama"><br>
+            E-mail : <input type="email" id="email" name="email"><br>
+            Tempat, Tanggal Lahir : 
+                <input type="text" id="tempat" name="tempat">
+                <input type="date" id="tanggal" name="tanggal"><br>
+            Alamat : <textarea id="alamat" name="alamat"></textarea><br>
+            Jenis Kelamin : 
+                <input type="radio" id="laki" name="gender" value="Laki-Laki"> Laki-Laki
+                <input type="radio" id="perempuan" name="gender" value="Perempuan"> Perempuan <br>
+                <br>
+            <input type="submit" value="Kirim">
+            <input type="reset" value="Batal">
+        </form>
+    </div>
+</body>
+</html>
